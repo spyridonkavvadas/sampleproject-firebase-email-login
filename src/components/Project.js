@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Project.css';
 import './Content.js'
-//import * from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { auth } from '../firebase'
 
 // Variables
@@ -30,7 +30,7 @@ function Project() {
 
     return pages ? (
         <>
-        <p><button onClick={() => auth.signOut()}>Sign out</button></p>
+        
 
             <div className="App">
                 {title}
@@ -68,6 +68,8 @@ function Project() {
 
 
             </div>
+
+            <div className='mt-4'><Button variant='danger' onClick={() => auth.signOut()}>Sign out</Button></div>
         </>
     ) : ('Loading...');
 }

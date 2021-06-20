@@ -25,6 +25,7 @@ function App() {
     })
     return unsubscribe
   }, [])
+
   return (
     <div className="App">
       {user ? 
@@ -34,7 +35,7 @@ function App() {
           <Route exact path="/">
             <Project />
           </Route>
-          <Route path="/content/:id">
+          <Route exact path="/content/:id">
             <Content />
           </Route>
         </Switch>
